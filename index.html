@@ -4,17 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Coach Hoot — Offline-First CSE Review Coach</title>
-  <meta name="description" content="Coach Hoot is a coach-led, offline-first CSE reviewer that helps you know what to study next, fix mistakes, and build exam confidence for a one-time ₱299 unlock." />
+  <title>Coach Hoot — Your Offline-First CSE Review Coach</title>
 
-  <meta property="og:title" content="Coach Hoot — Review Smart. Pass Confident." />
-  <meta property="og:description" content="Hindi lang reviewer. May coach ka. Join early access for the offline-first CSE review coach." />
+  <meta
+    name="description"
+    content="Coach Hoot is an offline-first CSE review coach for Filipino Civil Service Exam reviewees. Help us validate a smarter way to review with guidance, weak topic tracking, mistake review, and mock exams."
+  />
+
+  <meta property="og:title" content="Coach Hoot — Hindi lang reviewer. May coach ka." />
+  <meta
+    property="og:description"
+    content="Help validate Coach Hoot, an offline-first CSE review coach that tells reviewees what to study next and helps them review smarter."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/logo.png" />
 
   <link rel="icon" href="/assets/logo.png" />
   <link rel="apple-touch-icon" href="/assets/logo.png" />
   <link rel="stylesheet" href="/styles.css" />
+  <script src="/script.js" defer></script>
 </head>
 
 <body>
@@ -25,143 +33,87 @@
         <span class="brand-name">Coach <strong>Hoot</strong></span>
       </a>
 
-      <div class="nav-links">
-        <a href="#why">Why different?</a>
-        <a href="#coach-system">Coach System</a>
-        <a href="#pricing">₱299 unlock</a>
-        <a href="#waitlist" class="nav-cta">Join Early Access</a>
-      </div>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+  <a href="#problem">Why It Matters</a>
+  <a href="#solution">How Coach Hoot Helps</a>
+  <a href="#preview">App Preview</a>
+  <a href="#pricing">Value Check</a>
+  <a href="#waitlist" class="nav-cta">Share Feedback</a>
+</div>
     </nav>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero section-pad">
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="pill">
             <span class="pill-dot"></span>
-            Offline-first CSE review coach
+            Idea Validation • Offline-First CSE Review Coach
           </div>
 
-          <h1>Hindi lang reviewer. <span>May coach ka.</span></h1>
+          <h1>Stop guessing what to study next for the CSE.</h1>
 
-          <p class="tagline">Review Smart. Pass Confident.</p>
+          <p class="tagline">Coach Hoot helps you review with direction.</p>
 
           <p class="lead">
-            Coach Hoot helps Filipino CSE reviewers stop guessing what to study next. Get a coach-led review plan, focused practice, mistake review, mock exams, and progress guidance — even when you are offline.
+            We’re validating <strong>Coach Hoot</strong>, a mobile CSE review coach built to guide
+            Filipino reviewees through weak topics, mistake review, mock exams, and daily review plans —
+            even without internet.
           </p>
 
           <div class="hero-actions">
-            <a href="#waitlist" class="btn btn-primary">Join Early Access</a>
-            <a href="#coach-system" class="btn btn-ghost">See how it works</a>
+            <a href="#waitlist" class="btn btn-primary">Answer the 60sec Validation Form</a>
+            <a href="#preview" class="btn btn-ghost">See the App Concept</a>
           </div>
 
-          <div class="mini-proof" aria-label="Coach Hoot product promises">
+          <div class="trust-note">
+            <strong>No payment today.</strong>
+            We are validating first before building the full app, so your feedback directly shapes what we create.
+          </div>
+
+          <div class="mini-proof">
             <div>
-              <strong>One-time ₱299</strong>
-              <span>No monthly pressure</span>
-            </div>
-            <div>
-              <strong>Coach-led</strong>
+              <strong>Guided Review</strong>
               <span>Know what to study next</span>
             </div>
+
             <div>
-              <strong>Offline-first</strong>
-              <span>Review anytime, anywhere</span>
+              <strong>Offline-First</strong>
+              <span>Designed for limited internet access</span>
+            </div>
+
+            <div>
+              <strong>Coach-Led</strong>
+              <span>Not just random questions</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Coach Hoot app preview">
-          <div class="mascot-greeting">
-            <img src="/assets/logo.png" alt="Coach Hoot owl mascot" />
-            <div>
-              <strong>Hello, future civil servant!</strong>
-              <p>Are you taking <b>Professional</b> or <b>SubProfessional</b>?</p>
-              <div class="choice-pills" aria-hidden="true">
-                <span>Professional</span>
-                <span>SubProfessional</span>
-              </div>
-            </div>
-          </div>
+       
 
-          <div class="floating-card card-offline">
-            <span>📴</span>
-            Works offline
-          </div>
+            <img src="/assets/mascot.png" alt="Coach Hoot mascot" class="mascot-img" />
 
-          <div class="floating-card card-price">
-            <span>₱299</span>
-            One-time unlock
-          </div>
+            <div class="mascot-question">
+              <p>Which CSE level are you preparing for?</p>
 
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="phone-top">
-                <span>9:41</span>
-                <span>●●● 100%</span>
-              </div>
+              <div class="choice-row">
+                <button type="button" class="choice-btn" data-exam-choice="Professional">
+                  Professional
+                </button>
 
-              <div class="app-bar">
-                <div class="app-brand">
-                  <img src="/assets/logo.png" alt="" />
-                  <div>
-                    <strong>Coach Hoot</strong>
-                    <small>Review Smart. Pass Confident.</small>
-                  </div>
-                </div>
-                <button aria-label="Notifications">🔔</button>
-              </div>
+                <button type="button" class="choice-btn" data-exam-choice="SubProfessional">
+                  SubProfessional
+                </button>
 
-              <div class="coach-panel">
-                <div class="coach-avatar">
-                  <img src="/assets/logo.png" alt="Coach Hoot owl" />
-                </div>
-                <div>
-                  <small>Coach Hoot says</small>
-                  <h2>Start with your weak area today.</h2>
-                  <p>10 minutes now can build confidence later.</p>
-                </div>
-              </div>
-
-              <button class="app-primary">Start Today’s Coach Plan →</button>
-
-              <div class="readiness-card">
-                <div>
-                  <small>Estimated Readiness</small>
-                  <strong>72%</strong>
-                  <span>Improving • Numerical needs focus</span>
-                </div>
-                <div class="progress-ring"><span>72%</span></div>
-              </div>
-
-              <div class="plan-card">
-                <div class="section-title">
-                  <strong>Today’s Coach Plan</strong>
-                  <span>2 of 3 done</span>
-                </div>
-                <ul>
-                  <li><span>✓</span> 10 Verbal Ability questions</li>
-                  <li><span>✓</span> Review 5 mistakes</li>
-                  <li><span>•</span> 1 short Numerical drill</li>
-                </ul>
-                <div class="bar"><i></i></div>
-              </div>
-
-              <div class="quick-grid">
-                <button>📘<span>Practice</span></button>
-                <button>📝<span>Mock Exam</span></button>
-                <button>🔁<span>Mistake Bank</span></button>
-                <button>📊<span>Progress</span></button>
-              </div>
-
-              <div class="focus-card">
-                <div>
-                  <small>Focus Area</small>
-                  <strong>Numerical Ability</strong>
-                  <span>Accuracy: 58%</span>
-                </div>
-                <button>Drill Now</button>
+                <button type="button" class="choice-btn" data-exam-choice="Not sure yet">
+                  Not sure yet
+                </button>
               </div>
             </div>
           </div>
@@ -169,190 +121,359 @@
       </div>
     </section>
 
-    <section class="section-pad section-light" id="why">
+    <!-- VALIDATION BAR -->
+    <section class="validation-bar">
+      <div class="container validation-bar-grid">
+        <div>
+          <strong>We are validating the need.</strong>
+          <span>Do CSE reviewees want a coach, not just another reviewer?</span>
+        </div>
+
+        <div>
+          <strong>We are validating the features.</strong>
+          <span>Which tools are truly useful: diagnostics, mock exams, mistake bank, or reminders?</span>
+        </div>
+
+        <div>
+          <strong>We are validating the price.</strong>
+          <span>Would ₱299 feel fair if the app actually helps?</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section-pad section-light" id="problem">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">Why Coach Hoot is different</span>
-          <h2>Most CSE reviewers give you more questions. Coach Hoot gives you a plan.</h2>
+          <span class="eyebrow">The real problem</span>
+          <h2>CSE review is not only hard because of the questions. It is hard because reviewees feel lost.</h2>
           <p>
-            The real problem is not only a lack of reviewers. Many examinees do not know where to start, what to improve, or why they keep getting the same questions wrong.
+            Reviewers, PDFs, and free quizzes already exist. But many reviewees still struggle with direction,
+            consistency, and knowing whether they are truly improving.
           </p>
         </div>
 
-        <div class="problem-solution-grid">
-          <article class="problem-card">
-            <span class="card-label">Common reviewer problem</span>
-            <h3>Random practice. No clear direction.</h3>
-            <p>You answer questions, but you still wonder: “Ano ba dapat kong aralin next?”</p>
+        <div class="pain-grid">
+          <article class="pain-card">
+            <span>❓</span>
+            <h3>“Ano ba dapat kong unahin?”</h3>
+            <p>
+              Many reviewees jump from one topic to another without a clear study path.
+            </p>
           </article>
 
-          <article class="solution-card">
-            <span class="card-label">Coach Hoot solution</span>
-            <h3>Daily Coach Plan.</h3>
-            <p>Coach Hoot recommends the next best action based on your weak areas, mistakes, and progress.</p>
-          </article>
-        </div>
-
-        <div class="uvp-grid">
-          <article class="uvp-card featured">
-            <span class="icon">🧭</span>
-            <h3>Next Best Action</h3>
-            <p>Every time users open the app, Coach Hoot recommends what to do next: practice, mistake review, weak-topic drill, or mock exam.</p>
+          <article class="pain-card">
+            <span>🔁</span>
+            <h3>“Bakit paulit-ulit mali ko?”</h3>
+            <p>
+              Wrong answers are often forgotten instead of being used to improve weak areas.
+            </p>
           </article>
 
-          <article class="uvp-card">
-            <span class="icon">🎯</span>
-            <h3>Weak Topic Detection</h3>
-            <p>Track accuracy by topic and focus first on the areas most likely to pull the score down.</p>
-          </article>
-
-          <article class="uvp-card">
-            <span class="icon">🔁</span>
-            <h3>Spaced Mistake Review</h3>
-            <p>Wrong answers return at the right time so users do not repeat the same mistake again and again.</p>
-          </article>
-
-          <article class="uvp-card">
-            <span class="icon">📊</span>
-            <h3>Explainable Readiness</h3>
-            <p>Not just “72% ready.” Coach Hoot explains what improved and what still needs attention.</p>
+          <article class="pain-card">
+            <span>📉</span>
+            <h3>“Ready na ba talaga ako?”</h3>
+            <p>
+              Scores can show results, but they do not always explain what to do next.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-pad" id="coach-system">
+    <!-- SOLUTION -->
+    <section class="section-pad" id="solution">
       <div class="container split-section">
         <div>
-          <span class="eyebrow">The Coach Hoot system</span>
-          <h2>Assess. Guide. Practice. Improve.</h2>
+          <span class="eyebrow">The proposed solution</span>
+          <h2>Coach Hoot gives the reviewee a clear next step.</h2>
+
           <p class="section-copy">
-            Coach Hoot is planned as a cross-platform, offline-first app that feels simple, friendly, and motivating. The goal is to guide reviewers daily, not overwhelm them with a complicated dashboard.
+            Coach Hoot is planned as a personal CSE review coach. Instead of only giving questions,
+            it helps the reviewee understand what to focus on, what mistakes to fix, and when to take a mock exam.
           </p>
 
-          <div class="coach-note">
-            <img src="/assets/logo.png" alt="" />
-            <p><strong>Coach Hoot:</strong> “Tell me your exam type, then I’ll help you build a smarter review path.”</p>
-          </div>
+          <a href="#waitlist" class="btn btn-primary">Tell Us If This Helps</a>
         </div>
 
-        <div class="steps">
-          <div class="step">
-            <span>1</span>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span>🧭</span>
             <div>
-              <h3>Choose your track</h3>
-              <p>Professional, SubProfessional, or not sure yet.</p>
+              <h3>Daily Coach Plan</h3>
+              <p>
+                A simple recommendation that tells the user what to do next: practice, review mistakes,
+                drill a weak topic, or take a mock exam.
+              </p>
             </div>
           </div>
 
-          <div class="step">
-            <span>2</span>
+          <div class="feature-item">
+            <span>🎯</span>
             <div>
-              <h3>Take a diagnostic</h3>
-              <p>Find your starting readiness and weak subjects.</p>
+              <h3>Weak Topic Detection</h3>
+              <p>
+                Tracks low-performing areas so reviewees can stop wasting time on topics they already know.
+              </p>
             </div>
           </div>
 
-          <div class="step">
-            <span>3</span>
+          <div class="feature-item">
+            <span>🔁</span>
             <div>
-              <h3>Follow your Coach Plan</h3>
-              <p>Review what matters today instead of guessing topics.</p>
+              <h3>Mistake Bank</h3>
+              <p>
+                Saves wrong answers and brings them back later so repeated mistakes can be corrected before exam day.
+              </p>
             </div>
           </div>
 
-          <div class="step">
-            <span>4</span>
+          <div class="feature-item">
+            <span>📴</span>
             <div>
-              <h3>Fix mistakes and build confidence</h3>
-              <p>Use explanations, mistake review, mock exams, and reminders to improve.</p>
+              <h3>Offline-First Review</h3>
+              <p>
+                Planned so users can practice, review mistakes, and take mock exams even with limited or no internet.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-navy" id="pricing">
-      <div class="container pricing-grid">
-        <div>
-          <span class="eyebrow light">Simple pricing validation</span>
-          <h2>Would a ₱299 one-time unlock feel worth it?</h2>
+    <!-- HOW IT WORKS -->
+    <section class="section-pad section-light">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">How the review flow works</span>
+          <h2>A smarter loop for CSE preparation.</h2>
           <p>
-            We are validating one simple model: no monthly subscription, no forced recurring payment. Just one affordable lifetime unlock for the full Coach Hoot system.
+            Coach Hoot is designed around one simple review loop: find the weakness, practice with focus,
+            review the mistakes, and measure readiness.
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card">
+            <small>Step 01</small>
+            <h3>Diagnose</h3>
+            <p>Start with a short diagnostic test to identify where the reviewee stands.</p>
+          </article>
+
+          <article class="flow-card">
+            <small>Step 02</small>
+            <h3>Focus</h3>
+            <p>Coach Hoot highlights the topic that deserves attention first.</p>
+          </article>
+
+          <article class="flow-card">
+            <small>Step 03</small>
+            <h3>Practice</h3>
+            <p>Users answer topic-based drills and mock exam questions with explanations.</p>
+          </article>
+
+          <article class="flow-card">
+            <small>Step 04</small>
+            <h3>Improve</h3>
+            <p>Wrong answers return through the mistake bank until the user improves.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREVIEW -->
+    <section class="section-pad section-preview" id="preview">
+      <div class="container preview-grid">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-top">
+              <span>9:41</span>
+              <span>●●● 100%</span>
+            </div>
+
+            <div class="app-bar">
+              <div class="app-brand">
+                <img src="/assets/logo.png" alt="" />
+                <div>
+                  <strong>Coach Hoot</strong>
+                  <small>Review Smart. Pass Confident.</small>
+                </div>
+              </div>
+
+              <button type="button" aria-label="Notifications">🔔</button>
+            </div>
+
+            <div class="coach-panel">
+              <img src="/assets/logo.png" alt="" />
+
+              <div>
+                <small>Today’s Coach Message</small>
+                <h3>Start with your weakest topic.</h3>
+                <p>Numerical Ability needs your focus today.</p>
+              </div>
+            </div>
+
+            <button class="app-primary" type="button">Start Today’s Coach Plan →</button>
+
+            <div class="readiness-card">
+              <div>
+                <small>Estimated Readiness</small>
+                <strong>72%</strong>
+                <span>Improving • Needs more Numerical practice</span>
+              </div>
+
+              <div class="progress-ring">
+                <span>72%</span>
+              </div>
+            </div>
+
+            <div class="plan-card">
+              <div class="section-title">
+                <strong>Today’s Coach Plan</strong>
+                <span>2 of 3 done</span>
+              </div>
+
+              <ul>
+                <li><span>✓</span> 10 Verbal Ability questions</li>
+                <li><span>✓</span> Review 5 previous mistakes</li>
+                <li><span>•</span> 1 short Numerical Ability drill</li>
+              </ul>
+
+              <div class="bar">
+                <i></i>
+              </div>
+            </div>
+
+            <div class="focus-card">
+              <div>
+                <small>Focus Area</small>
+                <strong>Numerical Ability</strong>
+                <span>Accuracy: 58%</span>
+              </div>
+
+              <button type="button">Drill Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-copy">
+          <span class="eyebrow">Product concept preview</span>
+
+          <h2>The app should answer one question: “What should I do next?”</h2>
+
+          <p>
+            We want Coach Hoot to feel simple and useful. The reviewee opens the app, sees the next best action,
+            follows the plan, and slowly builds confidence through focused practice.
           </p>
 
-          <ul class="price-list">
-            <li>Full offline question access</li>
-            <li>Unlimited practice and mock exams</li>
-            <li>Mistake Bank and spaced review</li>
-            <li>Readiness score and progress tracking</li>
-            <li>Smart coach reminders and exam checklist</li>
+          <div class="coach-demo-box">
+            <span class="demo-label">Coach Hoot says:</span>
+            <p>
+              “You’re improving, but your Numerical Ability is still below target.
+              Let’s do a short drill first, then review your mistakes.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING VALIDATION -->
+    <section class="section-pad section-navy" id="pricing">
+      <div class="container validation-grid">
+        <div>
+          <span class="eyebrow light">About the ₱299 question</span>
+
+          <h2>We are not asking for payment today.</h2>
+
+          <p>
+            The ₱299 question is only for <strong>value validation</strong>.
+            We want to know if reviewees would consider paying for Coach Hoot only if it truly helps them review smarter,
+            save time, and prepare with more confidence.
+          </p>
+
+          <p>
+            If many users say it is too expensive, we adjust. If they want a free version first, we consider it.
+            If they say the features are not useful, we change the product before building too much.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <small>Possible future pricing idea</small>
+          <strong>₱299</strong>
+          <span>One-time unlock being validated</span>
+
+          <ul>
+            <li>✓ No payment collected here</li>
+            <li>✓ Feedback first before full build</li>
+            <li>✓ Price can change based on responses</li>
+            <li>✓ Product is independent and not CSC-affiliated</li>
           </ul>
         </div>
-
-        <div class="price-card-pro">
-          <span class="save-badge">Validation price</span>
-          <small>Lifetime Pro Unlock</small>
-          <strong>₱299</strong>
-          <p>One-time payment target. We are asking early users if this feels fair, useful, and worth paying for.</p>
-          <a href="#waitlist" class="btn btn-primary full">Tell us if ₱299 is worth it</a>
-        </div>
       </div>
     </section>
 
-    <section class="section-pad waitlist-section" id="waitlist">
+    <!-- FORM -->
+    <section class="section-pad" id="waitlist">
       <div class="container waitlist-grid">
         <div class="waitlist-copy">
-          <span class="eyebrow">Join early access</span>
-          <h2>Help us build a CSE reviewer people would actually love using.</h2>
+          <span class="eyebrow">Help us validate Coach Hoot</span>
+
+          <h2>Your feedback decides what we build first.</h2>
+
           <p>
-            Join the waitlist if you want a reviewer that guides you daily, works offline, helps you fix weak areas, and keeps you motivated until exam day.
+            This form helps us understand the real struggles of CSE reviewees, the features they value,
+            and whether the ₱299 idea feels fair only if the app is genuinely useful.
           </p>
 
           <div class="goal-box">
-            <strong>Validation goal</strong>
-            <span>Before full MVP build, we want to know if at least 500 reviewers are interested and if ₱299 one-time unlock feels valid.</span>
+            <strong>What we want to learn</strong>
+            <span>Is Coach Hoot solving a real review problem, or are we building the wrong thing?</span>
           </div>
 
-          <div class="sales-note">
-            <strong>Why we ask about ₱299:</strong>
-            <span>If users are willing, we build with confidence. If not, their reason tells us what must be improved before launch.</span>
+          <div class="privacy-note">
+            <strong>Privacy note</strong>
+            <span>Your response will only be used for Coach Hoot validation and early product updates.</span>
           </div>
         </div>
 
         <form class="waitlist-form" id="waitlistForm" novalidate>
-          <input class="hidden-field" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
-          <div class="form-header mascot-form-header">
-            <img src="/assets/logo.png" alt="Coach Hoot logo" />
+          <div class="form-header">
+            <img src="/assets/logo.png" alt="" />
             <div>
-              <h3>Hello, future civil servant 👋</h3>
-              <p>Are you taking Professional or SubProfessional?</p>
+              <h3>Coach Hoot Validation Form</h3>
+              <p>Quick questions only. No payment required.</p>
             </div>
+          </div>
+
+          <div class="hidden-field" aria-hidden="true">
+            <label>
+              Company Website
+              <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+            </label>
           </div>
 
           <div class="form-row">
             <label>
               Full name
-              <input type="text" name="full_name" placeholder="Juan Dela Cruz" required minlength="2" />
+              <input type="text" name="full_name" placeholder="Juan Dela Cruz" required />
             </label>
 
             <label>
               Email address
-              <input type="email" name="email" placeholder="you@email.com" required />
+              <input type="email" name="email" placeholder="you@example.com" required />
             </label>
           </div>
 
           <div class="form-row">
             <label>
-              Mobile number <small>optional</small>
+              Phone number <small>Optional</small>
               <input type="tel" name="phone" placeholder="09xxxxxxxxx" />
             </label>
 
             <label>
               CSE type
               <select name="exam_type" required>
-                <option value="">Choose one</option>
+                <option value="">Select one</option>
                 <option value="Professional">Professional</option>
                 <option value="SubProfessional">SubProfessional</option>
                 <option value="Not sure yet">Not sure yet</option>
@@ -364,51 +485,100 @@
             <label>
               Target exam timeline
               <select name="target_exam" required>
-                <option value="">Choose one</option>
-                <option value="Next available exam">Next available exam</option>
-                <option value="Within 3 months">Within 3 months</option>
-                <option value="Within 6 months">Within 6 months</option>
-                <option value="Still planning">Still planning</option>
+                <option value="">Select one</option>
+                <option value="Within 1 month">Within 1 month</option>
+                <option value="Within 2-3 months">Within 2-3 months</option>
+                <option value="Within 4-6 months">Within 4-6 months</option>
+                <option value="No exact date yet">No exact date yet</option>
               </select>
             </label>
 
             <label>
-              Is ₱299 one-time worth it?
-              <select name="price_interest" required>
-                <option value="">Choose one</option>
-                <option value="Yes - ₱299 is worth it">Yes, ₱299 is worth it</option>
-                <option value="Maybe - I need to see the app first">Maybe, I need to see the app first</option>
-                <option value="Maybe - if the questions and explanations are good">Maybe, if questions and explanations are good</option>
-                <option value="No - price is too high">No, price is too high</option>
-                <option value="No - I prefer free reviewers">No, I prefer free reviewers</option>
+              Review status
+              <select name="review_stage" required>
+                <option value="">Select one</option>
+                <option value="Planning to start">Planning to start</option>
+                <option value="Currently reviewing">Currently reviewing</option>
+                <option value="Already took the exam before">Already took the exam before</option>
+                <option value="Just exploring">Just exploring</option>
               </select>
             </label>
           </div>
 
           <label>
-            What would make Coach Hoot worth paying for?
-            <select name="top_need" required>
-              <option value="">Choose one</option>
-              <option value="A clear study plan / what to study next">A clear study plan / what to study next</option>
-              <option value="Better explanations and coach tips">Better explanations and coach tips</option>
-              <option value="Mistake Bank and repeated review">Mistake Bank and repeated review</option>
-              <option value="Realistic mock exams">Realistic mock exams</option>
-              <option value="Offline access">Offline access</option>
-              <option value="Progress and readiness tracking">Progress and readiness tracking</option>
+            Biggest review struggle
+            <select name="review_struggle" required>
+              <option value="">Select one</option>
+              <option value="I do not know what topic to study first">I do not know what topic to study first</option>
+              <option value="I keep making the same mistakes">I keep making the same mistakes</option>
+              <option value="I cannot track if I am improving">I cannot track if I am improving</option>
+              <option value="I lack motivation and consistency">I lack motivation and consistency</option>
+              <option value="I have limited internet/data access">I have limited internet/data access</option>
+              <option value="I need better explanations">I need better explanations</option>
             </select>
           </label>
 
           <label>
-            Tell us your reason <small>optional, but very helpful</small>
-            <textarea name="message" placeholder="If ₱299 is worth it, why? If not, what would make it valid for you?"></textarea>
+            If Coach Hoot had only one main feature first, what should it be?
+            <select name="top_need" required>
+              <option value="">Select one</option>
+              <option value="Diagnostic test and readiness score">Diagnostic test and readiness score</option>
+              <option value="Weak topic detection">Weak topic detection</option>
+              <option value="Mistake bank">Mistake bank</option>
+              <option value="Offline mock exam">Offline mock exam</option>
+              <option value="Daily study plan">Daily study plan</option>
+              <option value="Simple explanations after every answer">Simple explanations after every answer</option>
+            </select>
           </label>
 
-          <button class="btn btn-primary full" type="submit" id="submitButton">Join Early Access</button>
+          <label>
+            How important is offline access to you?
+            <select name="offline_need" required>
+              <option value="">Select one</option>
+              <option value="Very important">Very important</option>
+              <option value="Somewhat important">Somewhat important</option>
+              <option value="Not important">Not important</option>
+              <option value="I am not sure">I am not sure</option>
+            </select>
+          </label>
 
-          <p class="form-message" id="formMessage" role="status"></p>
+          <label>
+            If the app is useful, how does ₱299 one-time access feel?
+            <select name="price_interest" required>
+              <option value="">Select one</option>
+              <option value="Worth it if useful">Worth it if useful</option>
+              <option value="Maybe, but I need to try it first">Maybe, but I need to try it first</option>
+              <option value="Too expensive for me">Too expensive for me</option>
+              <option value="I prefer a free version with optional upgrade">I prefer a free version with optional upgrade</option>
+              <option value="I would pay more if it really helps">I would pay more if it really helps</option>
+            </select>
+          </label>
+
+          <label>
+            What would convince you to try Coach Hoot?
+            <textarea
+              name="biggest_value"
+              placeholder="Example: free trial, sample mock exam, better explanations, proof of improvement, offline access..."
+            ></textarea>
+          </label>
+
+          <label>
+            Any message, suggestion, or feature request? <small>Optional</small>
+            <textarea
+              name="message"
+              placeholder="Tell us what would make this app useful for you."
+            ></textarea>
+          </label>
+
+          <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary full" id="submitButton">
+            Submit Feedback
+          </button>
 
           <p class="form-disclaimer">
-            Coach Hoot is an independent review app concept. It is not affiliated with, endorsed by, or connected to the Civil Service Commission. Questions must be original and aligned only to CSE coverage.
+            Coach Hoot is an independent product concept. It is not affiliated with, endorsed by,
+            or officially connected to the Civil Service Commission.
           </p>
         </form>
       </div>
@@ -421,11 +591,9 @@
         <img src="/assets/logo.png" alt="Coach Hoot logo" class="brand-logo" />
         <span class="brand-name">Coach <strong>Hoot</strong></span>
       </a>
-      <p>© 2026 Coach Hoot. Independent CSE review coach concept.</p>
+
+      <p>© 2026 Coach Hoot. Offline-first CSE review coach validation.</p>
     </div>
   </footer>
-
- 
-<script src="/script.js?v3"></script>
 </body>
 </html>
